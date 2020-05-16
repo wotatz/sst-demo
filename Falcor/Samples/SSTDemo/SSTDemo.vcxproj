@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{6393B04D-A37A-44B0-8F6B-66810A481BC6}</ProjectGuid>
+    <RootNamespace>SSTDemo</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.0.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\Falcor\Framework\Source\Falcor.props" />
+    <Import Project="FalcorCUDA.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\Falcor\Framework\Source\Falcor.props" />
+    <Import Project="FalcorCUDA.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\Source\Falcor.vcxproj">
+      <Project>{3b602f0e-3834-4f73-b97d-7dfc91597a98}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FalcorCUDA.cpp" />
+    <ClCompile Include="Passes\GBuffer\GBuffer.cpp" />
+    <ClCompile Include="Passes\PassData.cpp" />
+    <ClCompile Include="Passes\RDAE\Rdae.cpp" />
+    <ClCompile Include="Passes\RDAE\TrtRdae.cpp" />
+    <ClCompile Include="Passes\SVGF\SVGF.cpp" />
+    <ClCompile Include="Passes\TemporalFilter\TemporalFilter.cpp" />
+    <ClCompile Include="Passes\VPLSampling\VPLSampling.cpp" />
+    <ClCompile Include="Passes\VPLTracing\VPLTracing.cpp" />
+    <ClCompile Include="Passes\VPLTree\Sort\BitonicSort.cpp" />
+    <ClCompile Include="Passes\VPLTree\VPLTree.cpp" />
+    <ClCompile Include="Passes\VPLTree\VPLTreeCheck.cpp" />
+    <ClCompile Include="Passes\VPLVisualizer\VPLVisualizer.cpp" />
+    <ClCompile Include="SSTDemo.cpp" />
+    <ClCompile Include="Utils\Cuda\CudaDx12Fence.cpp" />
+    <ClCompile Include="Utils\Cuda\CudaExternalMemory.cpp" />
+    <ClCompile Include="Utils\TRT\InferenceEngine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FalcorCUDA.h" />
+    <ClInclude Include="Passes\BasePass.h" />
+    <ClInclude Include="Passes\Common.h" />
+    <ClInclude Include="Passes\GBuffer\GBuffer.h" />
+    <ClInclude Include="Passes\GBuffer\GBufferData.h" />
+    <ClInclude Include="Passes\PassData.h" />
+    <ClInclude Include="Passes\RDAE\Rdae.h" />
+    <ClInclude Include="Passes\RDAE\TrtRdae.h" />
+    <ClInclude Include="Passes\Shared\VPLData.h" />
+    <ClInclude Include="Passes\Shared\VPLTreeStructs.h" />
+    <ClInclude Include="Passes\Shared\VPLUtils.h" />
+    <ClInclude Include="Passes\SVGF\SVGF.h" />
+    <ClInclude Include="Passes\TemporalFilter\TemporalFilter.h" />
+    <ClInclude Include="Passes\VPLSampling\VPLSampling.h" />
+    <ClInclude Include="Passes\VPLTracing\VPLTracing.h" />
+    <ClInclude Include="Passes\VPLTree\Sort\BitonicSort.h" />
+    <ClInclude Include="Passes\VPLTree\VPLTree.h" />
+    <ClInclude Include="Passes\VPLVisualizer\VPLVisualizer.h" />
+    <ClInclude Include="SSTDemo.h" />
+    <ClInclude Include="Utils\Cuda\CudaBuffer.h" />
+    <ClInclude Include="Utils\Cuda\CudaDx12Fence.h" />
+    <ClInclude Include="Utils\Cuda\CudaExternalMemory.h" />
+    <ClInclude Include="Utils\Cuda\CudaTimer.h" />
+    <ClInclude Include="Utils\TRT\InferenceEngine.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Passes\GBuffer\GBuffer.hlsl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="Passes\RDAE\PrepareRdaeInput.cs.slang" />
+    <None Include="Passes\RDAE\PrepareRdaeOutput.cs.slang" />
+    <None Include="Passes\Shared\GBufferUtils.slang" />
+    <None Include="Passes\Shared\Packing.slang" />
+    <None Include="Passes\Shared\Random.slang" />
+    <None Include="Passes\Shared\Utils.slang" />
+    <None Include="Passes\SVGF\Shaders\SVGFAtrous.ps.slang" />
+    <None Include="Passes\SVGF\Shaders\SVGFCommon.slang" />
+    <None Include="Passes\SVGF\Shaders\SVGFFilterMoments.ps.slang" />
+    <None Include="Passes\SVGF\Shaders\SVGFFinalModulate.ps.slang" />
+    <None Include="Passes\SVGF\Shaders\SVGFPackLinearZAndNormal.ps.slang" />
+    <None Include="Passes\SVGF\Shaders\SVGFReproject.ps.slang" />
+    <None Include="Passes\TemporalFilter\GradientEstimation.slang" />
+    <None Include="Passes\TemporalFilter\TemporalAccumulation.slang" />
+    <None Include="Passes\VPLSampling\BRDF.slang" />
+    <None Include="Passes\VPLSampling\VPLLightSample.slang" />
+    <None Include="Passes\VPLSampling\VPLShading.slang" />
+    <None Include="Passes\VPLSampling\VPLShadingData.slang" />
+    <None Include="Passes\VPLTree\Codes.slangh" />
+    <None Include="Passes\VPLTree\Sort\BitonicCommon.slang" />
+    <None Include="Passes\VPLTree\Sort\BitonicIndirectArgs.cs.slang" />
+    <None Include="Passes\VPLTree\Sort\BitonicInnerSort.cs.slang" />
+    <None Include="Passes\VPLTree\Sort\BitonicOuterSort.cs.slang" />
+    <None Include="Passes\VPLTree\Sort\BitonicPreSort.cs.slang" />
+    <None Include="Passes\VPLTree\TreeAssignLeafIndex.cs.slang" />
+    <None Include="Passes\VPLTree\TreeCode.cs.slang" />
+    <None Include="Passes\VPLTree\TreeInit.cs.slang" />
+    <None Include="Passes\VPLTree\TreeInternalNodes.cs.slang" />
+    <None Include="Passes\VPLTree\TreeMergeNodes.cs.slang" />
+    <None Include="Passes\VPLVisualizer\VPLVisualizer.slang" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Passes\VPLTracing\ResetVPLs.cs.hlsl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="Passes\VPLTracing\VPLTracing.rt.hlsl">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Passes\VPLSampling\VPLSampling.rt.hlsl">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.0.targets" />
+  </ImportGroup>
+</Project>

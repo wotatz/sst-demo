@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="SSTDemo.cpp" />
+    <ClCompile Include="Passes\GBuffer\GBuffer.cpp">
+      <Filter>Passes\GBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Passes\PassData.cpp">
+      <Filter>Passes</Filter>
+    </ClCompile>
+    <ClCompile Include="Passes\VPLTracing\VPLTracing.cpp">
+      <Filter>Passes\VPLTracing</Filter>
+    </ClCompile>
+    <ClCompile Include="Passes\VPLVisualizer\VPLVisualizer.cpp">
+      <Filter>Passes\VPLVisualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="Passes\VPLTree\VPLTree.cpp">
+      <Filter>Passes\VPLTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Passes\VPLTree\Sort\BitonicSort.cpp">
+      <Filter>Passes\VPLTree\Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Passes\VPLSampling\VPLSampling.cpp">
+      <Filter>Passes\VPLSampling</Filter>
+    </ClCompile>
+    <ClCompile Include="Passes\TemporalFilter\TemporalFilter.cpp">
+      <Filter>Passes\TemporalFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="Passes\SVGF\SVGF.cpp">
+      <Filter>Passes\SVGF</Filter>
+    </ClCompile>
+    <ClCompile Include="Passes\RDAE\Rdae.cpp">
+      <Filter>Passes\Rdae</Filter>
+    </ClCompile>
+    <ClCompile Include="Passes\RDAE\TrtRdae.cpp">
+      <Filter>Passes\Rdae</Filter>
+    </ClCompile>
+    <ClCompile Include="FalcorCUDA.cpp" />
+    <ClCompile Include="Utils\Cuda\CudaExternalMemory.cpp">
+      <Filter>Utils\Cuda</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\TRT\InferenceEngine.cpp">
+      <Filter>Utils\TRT</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Cuda\CudaDx12Fence.cpp">
+      <Filter>Utils\Cuda</Filter>
+    </ClCompile>
+    <ClCompile Include="Passes\VPLTree\VPLTreeCheck.cpp">
+      <Filter>Passes\VPLTree</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SSTDemo.h" />
+    <ClInclude Include="Passes\BasePass.h">
+      <Filter>Passes</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\GBuffer\GBufferData.h">
+      <Filter>Passes\GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\PassData.h">
+      <Filter>Passes</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\GBuffer\GBuffer.h">
+      <Filter>Passes\GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\VPLTracing\VPLTracing.h">
+      <Filter>Passes\VPLTracing</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\Shared\VPLData.h">
+      <Filter>Passes\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\VPLVisualizer\VPLVisualizer.h">
+      <Filter>Passes\VPLVisualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\VPLTree\VPLTree.h">
+      <Filter>Passes\VPLTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\VPLTree\Sort\BitonicSort.h">
+      <Filter>Passes\VPLTree\Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\VPLSampling\VPLSampling.h">
+      <Filter>Passes\VPLSampling</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\Shared\VPLTreeStructs.h">
+      <Filter>Passes\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\TemporalFilter\TemporalFilter.h">
+      <Filter>Passes\TemporalFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\SVGF\SVGF.h">
+      <Filter>Passes\SVGF</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\RDAE\Rdae.h">
+      <Filter>Passes\Rdae</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\RDAE\TrtRdae.h">
+      <Filter>Passes\Rdae</Filter>
+    </ClInclude>
+    <ClInclude Include="FalcorCUDA.h" />
+    <ClInclude Include="Utils\Cuda\CudaBuffer.h">
+      <Filter>Utils\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Cuda\CudaExternalMemory.h">
+      <Filter>Utils\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\TRT\InferenceEngine.hpp">
+      <Filter>Utils\TRT</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Cuda\CudaDx12Fence.h">
+      <Filter>Utils\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Cuda\CudaTimer.h">
+      <Filter>Utils\Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\Common.h">
+      <Filter>Passes</Filter>
+    </ClInclude>
+    <ClInclude Include="Passes\Shared\VPLUtils.h">
+      <Filter>Passes\Shared</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Passes">
+      <UniqueIdentifier>{cefc2782-084d-4783-ad11-2ba5d0095418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Passes\VPLTracing">
+      <UniqueIdentifier>{f3ba7244-6dbf-4d60-a570-78a5f7887238}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Passes\VPLSampling">
+      <UniqueIdentifier>{41fcd7f3-729a-4b00-9814-5458628e5798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Passes\VPLTree">
+      <UniqueIdentifier>{a096e0c8-1998-43b4-9459-09668dfdc789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Passes\GBuffer">
+      <UniqueIdentifier>{5faf82d5-5118-413d-9c75-ded230a77e11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Passes\Shared">
+      <UniqueIdentifier>{48528aff-9ccc-4693-a515-c46f461f9683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Passes\VPLVisualizer">
+      <UniqueIdentifier>{8c85f1d2-60f1-4301-966c-55e7b2095e10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Passes\VPLTree\Sort">
+      <UniqueIdentifier>{34c3222b-5de9-43b1-a815-f52739711810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Passes\TemporalFilter">
+      <UniqueIdentifier>{30e1c8a9-a3cb-4bcd-ac31-d5717e6cb893}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Passes\SVGF">
+      <UniqueIdentifier>{ffadfdd3-96cf-405f-93ed-cadb096d7432}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Passes\SVGF\Shaders">
+      <UniqueIdentifier>{896f25b4-837f-44f8-93ae-adfdaeb02a08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Passes\Rdae">
+      <UniqueIdentifier>{386db298-1765-46af-b240-8fd7054122e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{75bd0bd5-08a4-4141-a8e3-3a289b1ec773}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Cuda">
+      <UniqueIdentifier>{24d1c8c9-454e-40d9-9d38-b2e98914bf76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\TRT">
+      <UniqueIdentifier>{74739700-0b78-425e-8103-1f6f9e4cde55}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Passes\Shared\GBufferUtils.slang">
+      <Filter>Passes\Shared</Filter>
+    </None>
+    <None Include="Passes\Shared\Utils.slang">
+      <Filter>Passes\Shared</Filter>
+    </None>
+    <None Include="Passes\VPLVisualizer\VPLVisualizer.slang">
+      <Filter>Passes\VPLVisualizer</Filter>
+    </None>
+    <None Include="Passes\VPLTracing\ResetVPLs.cs.hlsl">
+      <Filter>Passes\VPLTracing</Filter>
+    </None>
+    <None Include="Passes\VPLTracing\VPLTracing.rt.hlsl">
+      <Filter>Passes\VPLTracing</Filter>
+    </None>
+    <None Include="Passes\VPLTree\Codes.slangh">
+      <Filter>Passes\VPLTree</Filter>
+    </None>
+    <None Include="Passes\VPLTree\TreeCode.cs.slang">
+      <Filter>Passes\VPLTree</Filter>
+    </None>
+    <None Include="Passes\VPLTree\TreeInit.cs.slang">
+      <Filter>Passes\VPLTree</Filter>
+    </None>
+    <None Include="Passes\VPLTree\TreeInternalNodes.cs.slang">
+      <Filter>Passes\VPLTree</Filter>
+    </None>
+    <None Include="Passes\VPLTree\TreeMergeNodes.cs.slang">
+      <Filter>Passes\VPLTree</Filter>
+    </None>
+    <None Include="Passes\VPLTree\Sort\BitonicCommon.slang">
+      <Filter>Passes\VPLTree\Sort</Filter>
+    </None>
+    <None Include="Passes\VPLTree\Sort\BitonicIndirectArgs.cs.slang">
+      <Filter>Passes\VPLTree\Sort</Filter>
+    </None>
+    <None Include="Passes\VPLTree\Sort\BitonicInnerSort.cs.slang">
+      <Filter>Passes\VPLTree\Sort</Filter>
+    </None>
+    <None Include="Passes\VPLTree\Sort\BitonicOuterSort.cs.slang">
+      <Filter>Passes\VPLTree\Sort</Filter>
+    </None>
+    <None Include="Passes\VPLTree\Sort\BitonicPreSort.cs.slang">
+      <Filter>Passes\VPLTree\Sort</Filter>
+    </None>
+    <None Include="Passes\GBuffer\GBuffer.hlsl">
+      <Filter>Passes\GBuffer</Filter>
+    </None>
+    <None Include="Passes\VPLSampling\VPLShading.slang">
+      <Filter>Passes\VPLSampling</Filter>
+    </None>
+    <None Include="Passes\TemporalFilter\GradientEstimation.slang">
+      <Filter>Passes\TemporalFilter</Filter>
+    </None>
+    <None Include="Passes\TemporalFilter\TemporalAccumulation.slang">
+      <Filter>Passes\TemporalFilter</Filter>
+    </None>
+    <None Include="Passes\VPLSampling\VPLSampling.rt.hlsl">
+      <Filter>Passes\VPLSampling</Filter>
+    </None>
+    <None Include="Passes\Shared\Packing.slang">
+      <Filter>Passes\Shared</Filter>
+    </None>
+    <None Include="Passes\SVGF\Shaders\SVGFAtrous.ps.slang">
+      <Filter>Passes\SVGF\Shaders</Filter>
+    </None>
+    <None Include="Passes\SVGF\Shaders\SVGFCommon.slang">
+      <Filter>Passes\SVGF\Shaders</Filter>
+    </None>
+    <None Include="Passes\SVGF\Shaders\SVGFFilterMoments.ps.slang">
+      <Filter>Passes\SVGF\Shaders</Filter>
+    </None>
+    <None Include="Passes\SVGF\Shaders\SVGFFinalModulate.ps.slang">
+      <Filter>Passes\SVGF\Shaders</Filter>
+    </None>
+    <None Include="Passes\SVGF\Shaders\SVGFPackLinearZAndNormal.ps.slang">
+      <Filter>Passes\SVGF\Shaders</Filter>
+    </None>
+    <None Include="Passes\SVGF\Shaders\SVGFReproject.ps.slang">
+      <Filter>Passes\SVGF\Shaders</Filter>
+    </None>
+    <None Include="Passes\RDAE\PrepareRdaeInput.cs.slang">
+      <Filter>Passes\Rdae</Filter>
+    </None>
+    <None Include="Passes\RDAE\PrepareRdaeOutput.cs.slang">
+      <Filter>Passes\Rdae</Filter>
+    </None>
+    <None Include="Passes\VPLTree\TreeAssignLeafIndex.cs.slang">
+      <Filter>Passes\VPLTree</Filter>
+    </None>
+    <None Include="Passes\Shared\Random.slang">
+      <Filter>Passes\Shared</Filter>
+    </None>
+    <None Include="Passes\VPLSampling\BRDF.slang">
+      <Filter>Passes\VPLSampling</Filter>
+    </None>
+    <None Include="Passes\VPLSampling\VPLShadingData.slang">
+      <Filter>Passes\VPLSampling</Filter>
+    </None>
+    <None Include="Passes\VPLSampling\VPLLightSample.slang">
+      <Filter>Passes\VPLSampling</Filter>
+    </None>
+  </ItemGroup>
+</Project>
